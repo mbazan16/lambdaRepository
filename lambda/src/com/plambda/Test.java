@@ -69,9 +69,16 @@ public class Test {
 		//Paso7 Conseguir el numero total de habitaciones de las casas de mas de 1 habitaci�n,
 		//      imprimiendo las casas que se han seleccionado.
 	
-		casas.stream()
-		.filter(e -> e.getNumHabitaciones() > 1)
-		.forEach(y -> System.out.println(y));
+//		casas.stream()
+//		.filter(e -> e.getNumHabitaciones() > 1)
+//		.forEach(y -> System.out.println(y));
+		
+		Long count= casas.stream()
+                 .filter(x -> x.getNumHabitaciones() > 1)
+                 .peek(e -> System.out.println("Casas con H m 1: " + e.getNombre())).count();
+                 
+		 
+		 System.out.println("Total de Casas con habitaciones mayores 1: " + count);
 		
 	}
 
