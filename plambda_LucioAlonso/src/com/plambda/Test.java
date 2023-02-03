@@ -70,7 +70,7 @@ public class Test {
 		System.out.println("\n[Paso 5] Los m2 de todos los salones de las casas: ");
 		List<Salon> paso5 = casas.stream()
 				.map(a -> a.getSalon())
-				.collect(Collectors.toList());
+				.collect(Collectors.toList()); 
 		paso5.stream().forEach(System.out::println);
 		
 		
